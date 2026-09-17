@@ -16,6 +16,18 @@ def load_data(filepath):
         print(f"❌ Filen {filepath} hittades inte!")
         return None
 
+def transform_data(data):
+    """Konverterar temperaturen från Celsius till Fahrenheit."""
+    if data is None:
+        return None
+    for row in data:
+        celsius = row['temperature']
+        fahrenheit = (celsius * 9/5) + 32
+        row['temperature_f'] = round(fahrenheit, 1)
+    print("✅ Data transformerad (Celsius → Fahrenheit)")
+    return data
+
+
 # Lägg till detta i slutet av pipeline.py
 
 if __name__ == "__main__":
@@ -28,3 +40,9 @@ if __name__ == "__main__":
         for row in transformed_data:
             print(f"{row['date']}: {row['temperature']}°C / {row['temperature_f']}°F")
     print("--- Pipeline klar ---")
+
+
+def celsius_till_fahrenheit(celsius):
+    """Omvandlar grader Celsius till Fahrenheit."""
+    return (celsius * 9/5) + 32
+ 
