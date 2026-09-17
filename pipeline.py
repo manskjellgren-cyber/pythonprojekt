@@ -1,8 +1,4 @@
-print("hello")
-# ny branch
 import csv
-
-
 def load_data(filepath):
     """Läser in data från en CSV-fil."""
     data = []
