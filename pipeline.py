@@ -1,3 +1,5 @@
+# Version 1.0 - Hotfix applied
+
 import csv
 
 def load_data(filepath):
@@ -26,7 +28,6 @@ def transform_data(data):
         row['temperature_f'] = round(fahrenheit, 1)
     print("✅ Data transformerad (Celsius → Fahrenheit)")
     return data
-
 
 # Lägg till detta i slutet av pipeline.py
 
