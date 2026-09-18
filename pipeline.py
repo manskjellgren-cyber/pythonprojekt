@@ -41,3 +41,9 @@ if __name__ == "__main__":
         for row in transformed_data:
             print(f"{row['date']}: {row['temperature']}°C / {row['temperature_f']}°F")
     print("--- Pipeline klar ---")
+
+
+def celsius_till_fahrenheit(celsius):
+    """Omvandlar grader Celsius till Fahrenheit."""
+    return (celsius * 9/5) + 32
+ 
